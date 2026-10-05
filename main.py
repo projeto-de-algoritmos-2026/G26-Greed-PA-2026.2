@@ -4,6 +4,7 @@ Exemplos:
   python main.py exemplos/palestras.json
   python main.py exemplos/palestras.csv --inicio 08:00 --fim 18:00
   python main.py exemplos/palestras.json --json
+  python main.py exemplos/palestras.json --html grade.html --abrir
   python main.py --api --porta 8000
 """
 
@@ -27,6 +28,8 @@ def criar_parser() -> argparse.ArgumentParser:
     parser.add_argument("--inicio", help="início da janela do evento (HH:MM)")
     parser.add_argument("--fim", help="fim da janela do evento (HH:MM)")
     parser.add_argument("--json", action="store_true", help="imprime o resultado em JSON")
+    parser.add_argument("--html", metavar="ARQUIVO", help="gera um relatório HTML para abrir no navegador")
+    parser.add_argument("--abrir", action="store_true", help="abre o relatório HTML no navegador")
     parser.add_argument("--sem-cor", action="store_true", help="desativa as cores ANSI")
     parser.add_argument("--api", action="store_true", help="inicia a API HTTP")
     parser.add_argument("--host", default="127.0.0.1", help="host da API (padrão: 127.0.0.1)")
@@ -58,6 +61,19 @@ def main(argv: list[str] | None = None) -> int:
         return 1
 
     resultado = selecionar_palestras(palestras, inicio, fim)
+
+    if args.html:
+        from pathlib import Path
+
+        from agenda.relatorio_html import gerar_html
+
+        destino = Path(args.html).resolve()
+        destino.write_text(gerar_html(resultado), encoding="utf-8")
+        print(f"Relatório HTML salvo em {destino}")
+        if args.abrir:
+            import webbrowser
+            webbrowser.open(destino.as_uri())
+        return 0
 
     if args.json:
         print(json.dumps(resultado.para_dict(), ensure_ascii=False, indent=2))
