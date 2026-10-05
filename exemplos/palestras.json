@@ -1,0 +1,19 @@
+{
+  "palestras": [
+    {"titulo": "Abertura do Simpósio", "palestrante": "Comissão Organizadora", "inicio": "08:00", "fim": "08:30"},
+    {"titulo": "Algoritmos Gulosos na Prática", "palestrante": "Ana Ribeiro", "inicio": "08:30", "fim": "09:30"},
+    {"titulo": "Introdução a Grafos", "palestrante": "Carlos Mendes", "inicio": "08:15", "fim": "10:00"},
+    {"titulo": "Programação Dinâmica Avançada", "palestrante": "Beatriz Lima", "inicio": "09:00", "fim": "10:30"},
+    {"titulo": "Estruturas de Dados Persistentes", "palestrante": "Diego Souza", "inicio": "09:30", "fim": "10:30"},
+    {"titulo": "Coffee Talk: Carreira Acadêmica", "palestrante": "Fernanda Costa", "inicio": "10:30", "fim": "11:00"},
+    {"titulo": "Complexidade Computacional", "palestrante": "Gustavo Pereira", "inicio": "10:45", "fim": "12:00"},
+    {"titulo": "Aprendizado de Máquina e Otimização", "palestrante": "Helena Martins", "inicio": "11:00", "fim": "12:00"},
+    {"titulo": "Teoria dos Jogos", "palestrante": "Igor Almeida", "inicio": "11:30", "fim": "13:00"},
+    {"titulo": "Criptografia Pós-Quântica", "palestrante": "Juliana Rocha", "inicio": "13:30", "fim": "14:30"},
+    {"titulo": "Computação em Nuvem", "palestrante": "Lucas Ferreira", "inicio": "14:00", "fim": "15:00"},
+    {"titulo": "Algoritmos Aproximados", "palestrante": "Mariana Dias", "inicio": "14:30", "fim": "15:30"},
+    {"titulo": "Bioinformática", "palestrante": "Nicolas Barros", "inicio": "15:00", "fim": "17:00"},
+    {"titulo": "Painel: O Futuro da Computação", "palestrante": "Convidados", "inicio": "15:30", "fim": "17:00"},
+    {"titulo": "Encerramento", "palestrante": "Comissão Organizadora", "inicio": "17:00", "fim": "17:30"}
+  ]
+}
