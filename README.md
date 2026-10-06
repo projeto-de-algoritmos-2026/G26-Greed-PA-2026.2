@@ -21,6 +21,8 @@ Os intervalos são semiabertos `[início, fim)`: uma palestra que termina às 10
 com outra que começa às 10:00. Os testes comparam o resultado com uma busca por força bruta em
 200 casos aleatórios.
 
+## Link para o vídeo no Youtube: https://youtu.be/un_TM4pJtis
+
 ## Estrutura
 
 ```
